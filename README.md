@@ -1,5 +1,7 @@
 # msg2img
-A JavaScript browser module for encoding arbitrary data into a PNG image
+A JavaScript browser module for encoding arbitrary data into a PNG image.
+
+It uses HTML5 `canvas` elements to draw images onto. However, the encoding and decoding takes place without attaching any elements to the DOM, so the whole process is completely invisible to the user.
 
 
 ## Build
