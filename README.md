@@ -8,7 +8,7 @@ A JavaScript browser module for encoding arbitrary data into a PNG image
 The standalone module was built using browserify as follows:
 
 ```bash
-npm install browserify
+npm install -g browserify
 browserify -e msg2img.js -s msg2img -o msg2img_standalone.js
 ```
 
