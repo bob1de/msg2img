@@ -18,12 +18,16 @@ Please note that the `encode` function takes an `ÀrrayBuffer` object and return
 ```javascript
 var msg2img = require("msg2img");
 var msg = "Hello there, I am in the image!";
-var msgArr8 = new Uint8Array(msg.length);
+
+// Encode
+var msgArr16 = new Uint16Array(msg.length);
 for (var i = 0; i < msg.length; i ++)
-  msgArr8[i] = msg.charCodeAt(i);
-var imgDataURL = msg2img.encode(msg);
-msgArr8 = new Uint8Array(msg2img.decode(msgDataURL));
-msg = msgArr8.apply(null, String.fromCharCode);
+  msgArr16[i] = msg.charCodeAt(i);
+var imgDataURL = msg2img.encode(msgArr16.buffer);
+
+// Decode
+msgArr16 = new Uint16Array(msg2img.decode(imgDataURL));
+msg = String.fromCharCode.apply(null, msgArr16);
 ```
 
 ## Tests
