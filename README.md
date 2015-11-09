@@ -15,7 +15,7 @@ browserify -e msg2img.js -s msg2img -o msg2img_standalone.js
 ## Usage
 Please note that the `encode` function takes an `ÀrrayBuffer` object and returns the data URL of the generated PNG image. The `decode` function works just the other way around.
 
-```bash
+```javascript
 var msg2img = require("msg2img");
 var msg = "Hello there, I am in the image!";
 var msgArr8 = new Uint8Array(msg.length);
